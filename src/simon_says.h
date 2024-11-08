@@ -1,3 +1,5 @@
+#pragma once
+
 SDL_Window *window = NULL;
 SDL_Renderer *renderer = NULL;
 int is_running = FALSE;
