@@ -6,3 +6,11 @@ typedef struct {
 	SDL_Colour colour;
 	int is_pressed;
 } simon_button;
+
+enum players {Simon, Player};
+enum queue_items {Red, Green, Blue, Yellow};
+
+struct game_state {
+	int turn;
+	int game_over;
+};

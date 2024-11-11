@@ -71,7 +71,7 @@ void process_input(void)
 	}
 }
 
-int check_in_bounds(simon_button sb, int x, int y)
+uint8_t check_in_bounds(simon_button sb, u_int32_t x, u_int32_t y)
 {
 	return x >= sb.r.x && x <= (sb.r.x+sb.r.w) && y >= sb.r.y && y <= (sb.r.y + sb.r.h) ? 1 : 0;
 }
