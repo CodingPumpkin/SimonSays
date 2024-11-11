@@ -71,7 +71,7 @@ void process_input(void)
 	}
 }
 
-uint8_t check_in_bounds(simon_button sb, u_int32_t x, u_int32_t y)
+uint8_t check_in_bounds(simon_button sb, int32_t x, int32_t y)
 {
 	return x >= sb.r.x && x <= (sb.r.x+sb.r.w) && y >= sb.r.y && y <= (sb.r.y + sb.r.h) ? 1 : 0;
 }
@@ -116,7 +116,7 @@ void draw(void)
 	SDL_SetRenderDrawColor(renderer, blue.colour.r, blue.colour.g, blue.colour.b  - blue.is_pressed*PRESSED, blue.colour.a);
 	SDL_RenderFillRect(renderer, &(blue.r));
 
-	SDL_SetRenderDrawColor(renderer, yellow.colour.r  - yellow.is_pressed*PRESSED, yellow.colour.g  - yellow.is_pressed*PRESSED, yellow.colour.b, yellow.colour.a);
+	SDL_SetRenderDrawColor(renderer, yellow.colour.r - yellow.is_pressed*PRESSED, yellow.colour.g  - yellow.is_pressed*PRESSED, yellow.colour.b, yellow.colour.a);
 	SDL_RenderFillRect(renderer, &(yellow.r));
 
 	SDL_RenderPresent(renderer);
