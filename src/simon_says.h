@@ -1,11 +1,11 @@
 #pragma once
 
-
 #include <stdint.h>
+
 SDL_Window *window = NULL;
 SDL_Renderer *renderer = NULL;
 uint8_t is_running = FALSE;
-simon_button red, green, yellow, blue;
+struct simon_button red, green, yellow, blue;
 int32_t m_x, m_y;
 
 //Window related methods
@@ -20,5 +20,5 @@ void draw(void);
 void setup_rect(char);
 
 //Additional methods
-uint8_t check_in_bounds(simon_button, int32_t, int32_t);
+uint8_t check_in_bounds(struct simon_button, int32_t, int32_t);
 void reset(void);

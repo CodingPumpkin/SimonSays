@@ -1,10 +1,11 @@
 #pragma once
 
 #include <stdint.h>
-typedef struct {
+struct simon_button {
 	int x;
 	int y;
 	SDL_Rect r;
 	SDL_Colour colour;
 	int is_pressed;
-} simon_button;
+};
+

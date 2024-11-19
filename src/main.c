@@ -3,10 +3,13 @@
 
 #include "./constants.h"
 #include "./types.h"
+#include "./logic.h"
 #include "./simon_says.h"
 
 int main(int argc, char *argv[])
 {
+	// init_queue();
+	// generate_queue();
 	is_running = TRUE;
 	init_window();
 	setup();
@@ -71,7 +74,7 @@ void process_input(void)
 	}
 }
 
-uint8_t check_in_bounds(simon_button sb, int32_t x, int32_t y)
+uint8_t check_in_bounds(struct simon_button sb, int32_t x, int32_t y)
 {
 	return x >= sb.r.x && x <= (sb.r.x+sb.r.w) && y >= sb.r.y && y <= (sb.r.y + sb.r.h) ? 1 : 0;
 }
@@ -107,7 +110,7 @@ void draw(void)
 	SDL_SetRenderDrawColor(renderer, 220, 220, 220, 255);
 	SDL_RenderClear(renderer);
 
-	SDL_SetRenderDrawColor(renderer, red.colour.r  - red.is_pressed*PRESSED, red.colour.g, red.colour.b, red.colour.a);
+	SDL_SetRenderDrawColor(renderer, red.colour.r - red.is_pressed*PRESSED, red.colour.g, red.colour.b, red.colour.a);
 	SDL_RenderFillRect(renderer, &(red.r));
 
 	SDL_SetRenderDrawColor(renderer, green.colour.r, green.colour.g - green.is_pressed*PRESSED, green.colour.b, green.colour.a);

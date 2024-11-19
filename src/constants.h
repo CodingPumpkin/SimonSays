@@ -8,7 +8,4 @@
 
 #define SQUARE_SIZE 200
 #define OFFSET 10
-#define PRESSED 55
-
-#define FPS 30
-#define FRAME_TIME (1000/FPS)
+#define PRESSED 255
