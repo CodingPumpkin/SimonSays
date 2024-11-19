@@ -1,6 +1,7 @@
 #pragma once
 
 #include <stdint.h>
+
 struct simon_button {
 	int x;
 	int y;
@@ -9,3 +10,4 @@ struct simon_button {
 	int is_pressed;
 };
 
+struct simon_button simbut;

@@ -6,22 +6,12 @@
 #include <time.h>
 #include <stdio.h>
 
-#define QUEUE_BUFFER_SIZE 4
+#include "constants.h"
 
 enum players {Simon, Player};
 enum queue_items {Red, Green, Blue, Yellow, End};
 
-struct game_state_struct{
-    uint8_t turn;
-    uint8_t game_over;
-    struct {
-        uint8_t *current_ptr;
-        uint8_t *contents_end_ptr;
-        uint16_t length;
-        uint8_t *arr;
-    } queue;
-};
-// } *game_state;
+struct game_state_struct;
 
 void init_queue(void);
 void generate_queue(void);

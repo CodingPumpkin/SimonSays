@@ -8,8 +8,9 @@
 
 int main(int argc, char *argv[])
 {
-	// init_queue();
-	// generate_queue();
+	setup_game_state_struct();
+	init_queue();
+	generate_queue();
 	is_running = TRUE;
 	init_window();
 	setup();

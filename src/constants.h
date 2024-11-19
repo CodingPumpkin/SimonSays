@@ -9,3 +9,5 @@
 #define SQUARE_SIZE 200
 #define OFFSET 10
 #define PRESSED 255
+
+#define QUEUE_BUFFER_SIZE 4
